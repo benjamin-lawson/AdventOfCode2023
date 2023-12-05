@@ -43,15 +43,6 @@ namespace AdventOfCode2023
             return sum.ToString();
         }
 
-        private void PrintCardProcessingList(List<ScratchCard> cards)
-        {
-            foreach (ScratchCard card in cards)
-            {
-                Console.Write($"{card.CardNumber}, ");
-            }
-            Console.WriteLine();
-        }
-
         public override string SolvePart2(string inputPath, bool debug)
         {
             List<ScratchCard> cards = File.ReadAllLines(inputPath).Select(l => new ScratchCard(l)).ToList();
