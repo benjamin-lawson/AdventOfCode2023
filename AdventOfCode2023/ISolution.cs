@@ -23,6 +23,16 @@ namespace AdventOfCode2023
             return answer;
         }
 
+        public string[] GetProblemInput(string inputPath)
+        {
+            if (File.Exists(inputPath))
+            {
+                return File.ReadAllLines(inputPath);
+            }
+            Console.WriteLine("PROBLEM INPUT FILE DOES NOT EXIST");
+            return new string[0];
+        }
+
         public abstract string SolvePart1(string inputPath, bool debug);
         public abstract string SolvePart2(string inputPath, bool debug);
     }
