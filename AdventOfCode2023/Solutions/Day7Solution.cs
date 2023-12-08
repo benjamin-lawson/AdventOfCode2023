@@ -53,7 +53,7 @@ namespace AdventOfCode2023
             
             if (handStr.Contains('J') && Type != HandType.FIVE_OF_A_KIND)
             {
-                foreach (char c in Card.CardValues)
+                foreach (char c in GetLetterCounts(cards).Keys)
                 {
                     if (c == 'J') continue;
 
